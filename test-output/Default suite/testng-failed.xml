@@ -6,7 +6,9 @@
       <class name="training.SafeGold">
         <methods>
           <include name="teardown"/>
+          <include name="transaction"/>
           <include name="setup"/>
+          <include name="sellgold"/>
           <include name="purchasegold"/>
         </methods>
       </class> <!-- training.SafeGold -->

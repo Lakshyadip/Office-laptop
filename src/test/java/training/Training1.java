@@ -26,8 +26,8 @@ public class Training1 {
         // Login
         driver.findElement(By.xpath("//a[text()='Back Office Login']")).click();
         new Select(driver.findElement(By.id("DeptID"))).selectByVisibleText("IT");
-        driver.findElement(By.id("SurveyGName")).sendKeys("Arshdeep Singh");
-        driver.findElement(By.id("SurveyGMobile")).sendKeys("9503213906");
+        driver.findElement(By.id("SurveyGName")).sendKeys("devendra dharwar");
+        driver.findElement(By.id("SurveyGMobile")).sendKeys("9713894681");
         driver.findElement(By.xpath("//button[text()='Continue']")).click();
 
         // Start quiz
@@ -35,10 +35,10 @@ public class Training1 {
         driver.findElement(By.id("start_quiz")).click();
 
         // Answer 24 questions
-        for (int i = 1; i <= 24; i++) {
+        for (int i = 1; i <= 29; i++) {
         	js.executeScript("document.body.style.zoom='80%'");
             WebElement option = mywait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//div[@onclick='optionSelected(this)'][1]")));
+                    By.xpath("//div[@onclick='optionSelected(this)'][3]")));
             option.click();
             Thread.sleep(5000);
             WebElement nextButton = driver.findElement(By.xpath("//button[text()='Next']"));
@@ -49,7 +49,7 @@ public class Training1 {
         // Answer last question and submit
         js.executeScript("document.body.style.zoom='80%'");
         WebElement lastOption = mywait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//div[@onclick='optionSelected(this)'][1]")));
+                By.xpath("//div[@onclick='optionSelected(this)'][3]")));
         lastOption.click();
         Thread.sleep(5000);
 
